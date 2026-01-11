@@ -10,94 +10,114 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">GALAXY<span>STORE</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Početna</a></li>
-                <li><a href="index.html#inventory">Uređaji</a></li>
-                <li><a href="novosti.html">Novosti</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-            <div class="nav-right">
-                <a href="kosarica.html" class="cart-link">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="cart-text">KOŠARICA</span> [<span id="cart-count">0</span>]
-                    <a href="login.html" class="login-btn-top">Prijava</a>
-                </a>
-                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-            </div>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="hero-content">
-            <p data-aos="fade-up">Galaxy AI je ovdje</p>
-            <h1 data-aos="fade-up" data-aos-delay="200">S25 Ultra.<br>Titanium.</h1>
-            <div data-aos="fade-up" data-aos-delay="400">
-                <a href="index.html#inventory" class="btn-lux primary">Kupi odmah</a>
+
+<header class="site-header">
+    <nav class="nav-container">
+        <a href="index.html" class="logo">GALAXY<span>STORE</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="index.html#inventory">Uređaji</a></li>
+            <li><a href="novosti.html">Novosti</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="kosarica.html" class="cart-link">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-text">KOŠARICA</span>
+                [<span id="cart-count">0</span>]
+            </a>
+            <a href="login.html" class="login-btn-top">Prijava</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="hero-video" data-aos="fade-up" data-aos-delay="600">
-            <video width="50%" height="auto" controls>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <p data-aos="fade-up">Galaxy AI je ovdje</p>
+        <h1 data-aos="fade-up" data-aos-delay="200">
+            S25 Ultra.<br>Titanium.
+        </h1>
+        <div data-aos="fade-up" data-aos-delay="400">
+            <a href="index.html#inventory" class="btn-lux primary">Kupi odmah</a>
+        </div>
+    </div>
+
+    <div class="hero-video" data-aos="fade-up" data-aos-delay="600">
+        <video width="50%" height="auto" controls>
             <source src="s25ultra.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
-    <div class="search-container" data-aos="fade-up">
-        <div class="glass-search">
-            <div class="search-group">
-                <label>Kategorija</label>
-                <select id="sCategory">
-                    <option value="all">Svi Uređaji</option>
-                    <option value="S-Series">S Serija</option>
-                    <option value="Z-Series">Z Fold & Flip</option>
-                    <option value="Tablets">Tableti</option>
-                    <option value="Watches">Pametni Satovi</option>
-                </select>
-            </div>
-            <div class="search-group">
-                <label>Max cijena (€)</label>
-                <input type="number" id="sPrice" placeholder="npr. 1500">
-            </div>
-            <button class="btn-search" onclick="filterDevices()">Pretraži</button>
-        </div>
+        </video>
     </div>
-    <div class="marquee-strip">
-        <div class="marquee-content syncopate">
-            • GALAXY AI • SNAPDRAGON 8 GEN 3 • TITANIUM DESIGN • 200MP CAMERA • DYNAMIC AMOLED 2X • ONE UI 6.1 • 5G CONNECTIVITY • S-PEN • GALAXY AI • SNAPDRAGON 8 GEN 3 • TITANIUM DESIGN •
+</section>
+
+<div class="search-container" data-aos="fade-up">
+    <div class="glass-search">
+        <div class="search-group">
+            <label>Kategorija</label>
+            <select id="sCategory">
+                <option value="all">Svi Uređaji</option>
+                <option value="S-Series">S Serija</option>
+                <option value="Z-Series">Z Fold & Flip</option>
+                <option value="Tablets">Tableti</option>
+                <option value="Watches">Pametni Satovi</option>
+            </select>
         </div>
+
+        <div class="search-group">
+            <label>Max cijena (€)</label>
+            <input type="number" id="sPrice" placeholder="npr. 1500">
+        </div>
+
+        <button class="btn-search" onclick="filterDevices()">Pretraži</button>
     </div>
-    <section class="container" data-aos="fade-up">
-        <div class="filter-grid-main">
-            <div class="f-item" onclick="filterByCategory('S-Series')"><span>📱</span><p>S SERIJA</p></div>
-            <div class="f-item" onclick="filterByCategory('Z-Series')"><span>📖</span><p>FOLD/FLIP</p></div>
-            <div class="f-item" onclick="filterByCategory('Tablets')"><span>💻</span><p>TABLETI</p></div>
-            <div class="f-item" onclick="filterByCategory('Watches')"><span>⌚</span><p>SATOVI</p></div>
-            <div class="f-item" onclick="filterByCategory('Audio')"><span>🎧</span><p>BUDS</p></div>
-            <div class="f-item" onclick="filterByCategory('Accessories')"><span>🔌</span><p>DODACI</p></div>
+</div>
+
+<div class="marquee-strip">
+    <div class="marquee-content syncopate">
+        • GALAXY AI • SNAPDRAGON 8 GEN 3 • TITANIUM DESIGN • 200MP CAMERA •
+        DYNAMIC AMOLED 2X • ONE UI 6.1 • 5G CONNECTIVITY • S-PEN • GALAXY AI •
+        SNAPDRAGON 8 GEN 3 • TITANIUM DESIGN •
+    </div>
+</div>
+
+<section class="container" data-aos="fade-up">
+    <div class="filter-grid-main">
+        <div class="f-item" onclick="filterByCategory('S-Series')"><span>📱</span><p>S SERIJA</p></div>
+        <div class="f-item" onclick="filterByCategory('Z-Series')"><span>📖</span><p>FOLD/FLIP</p></div>
+        <div class="f-item" onclick="filterByCategory('Tablets')"><span>💻</span><p>TABLETI</p></div>
+        <div class="f-item" onclick="filterByCategory('Watches')"><span>⌚</span><p>SATOVI</p></div>
+        <div class="f-item" onclick="filterByCategory('Audio')"><span>🎧</span><p>BUDS</p></div>
+        <div class="f-item" onclick="filterByCategory('Accessories')"><span>🔌</span><p>DODACI</p></div>
+    </div>
+</section>
+
+<main class="grid-container" id="inventory">
+    <div class="section-header" data-aos="fade-right">
+        <h2 class="section-title syncopate">Novo u ponudi</h2>
+        <p class="muted">Najbolja tehnologija današnjice.</p>
+    </div>
+
+    <div id="device-list" class="car-grid"></div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="logo syncopate">GALAXY<span>STORE</span></div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/samsung/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Samsung"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/nid0n/WebAplikacije-projekt-SamsungStore"><i class="fa-brands fa-github"></i></a>
         </div>
-    </section>
-    <main class="grid-container" id="inventory">
-        <div class="section-header" data-aos="fade-right">
-            <h2 class="section-title syncopate">Novo u ponudi</h2>
-            <p class="muted">Najbolja tehnologija današnjice.</p>
-        </div>
-        <div id="device-list" class="car-grid">
-        </div>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="logo syncopate">GALAXY<span>STORE</span></div>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/samsunghrvatska/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@Samsung"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://github.com/nid0n/WebAplikacije-projekt-web-stranica"><i class="fa-brands fa-github"></i></a>
-            </div>
-            &copy; Copyright Samsung store
-        </div>
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+        &copy; Copyright Samsung store
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
 </script>
+
 </body>
 </html>
