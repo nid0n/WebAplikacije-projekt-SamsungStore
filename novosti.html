@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novosti</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+.journal-card {
+    background: var(--black-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+.journal-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.journal-img {
+    height: 260px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0a0a0a;
+    transition: 0.5s;
+}
+.journal-card:hover .journal-img {
+    transform: scale(1.05);
+}
+.journal-body {
+    padding: 40px;
+}
+.journal-body h3 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.35rem;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+.journal-body p {
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+.meta {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="nav-container">
+    <a href="index.html" class="logo">GALAXY<span>STORE</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="index.html#inventory">Uređaji</a></li>
+        <li><a href="novosti.html" class="active">Novosti</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="nav-right">
+        <a href="kosarica.html" class="cart-link">
+            <i class="fa-solid fa-bag-shopping"></i> [0]
+        </a>
+    </div>
+</div>
+</header>
+<main class="container" style="margin-top:120px; min-height:80vh;">
+<section>
+<div class="section-head" data-aos="fade-right">
+    <h1 class="syncopate" style="font-size: clamp(3.5rem, 12vw, 5em);">
+        NOVOSTI
+    </h1>
+    <p class="muted">
+        Ekskluzivne vijesti i vodiči o najnovijim Samsung uređajima.
+    </p>
+</div>
+<div class="news-grid">
+<a href="clanak25ultra.html" class="card-link">
+<article class="journal-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="journal-img" style="background-image:url('s25.ultra.jpg');"></div>
+    <div class="journal-body">
+        <h3>Galaxy S25 Ultra Titanium</h3>
+        <p>
+            Pregled karakteristika, dizajna i novih AI funkcija Samsung Galaxy S25 Ultra uređaja.
+        </p>
+        <div class="meta">Objavljeno: 10.01.2026.</div>
+    </div>
+</article>
+</a>
+<a href="clanak-ai.html" class="card-link">
+<article class="journal-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="journal-img" style="background-image:url('ai.jpg');"></div>
+    <div class="journal-body">
+        <h3>Nove AI inovacije u smartphone svijetu</h3>
+        <p>
+            Dostupne su nove AI inovacije koje olakšavaju svakodnevni život korisnika.
+        </p>
+        <div class="meta">Objavljeno: 08.01.2026.</div>
+    </div>
+</article>
+</a>
+<a href="clanak_launch_event.html" class="card-link">
+<article class="journal-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="journal-img" style="background-image:url('launch_event.jpg');"></div>
+    <div class="journal-body">
+        <h3>Galaxy Launch Event</h3>
+        <p>
+            Predbilježite se i budite dio Galaxy Launch Eventa novih Samsung uređaja.
+        </p>
+        <div class="meta">Objavljeno: 05.01.2026.</div>
+    </div>
+</article>
+</a>
+</div>
+</section>
+</main>
+<footer style="text-align:center; padding:80px 0; border-top:1px solid var(--border);">
+    &copy; Galaxy Store
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+</script>
+</body>
+</html>
