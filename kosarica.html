@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hr" data-theme="white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košarica</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">GALAXY<span>STORE</span></a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="index.html#inventory">Uređaji</a></li>
+            <li><a href="novosti.html">Novosti</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="kosarica.html" class="cart-link">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Košarica [<span id="cart-count">0</span>]
+            </a>
+        </div>
+    </div>
+</header>
+<main class="container" style="margin-top: 140px; min-height: 70vh; padding: 0 20px;">
+    <div class="section-head" data-aos="fade-right">
+        <p style="letter-spacing:3px; font-size:0.8rem; color:var(--primary);">
+            Moja kolekcija
+        </p>
+        <h1 class="syncopate" style="font-size: clamp(2.5rem, 6vw, 3.5rem);">
+            Moja košarica
+        </h1>
+
+        <p id="garage-stats" class="muted">
+            Pregled odabranih Samsung uređaja
+        </p>
+    </div>
+    <div id="garage-list" class="car-grid" style="margin-top: 50px;">
+    </div>
+    <div id="total-value-container"
+         style="margin-top: 80px; border-top: 1px solid var(--border);
+                padding: 40px 0; display: none; text-align: center;">
+
+        <h2 class="syncopate"
+            style="font-size:0.9rem; letter-spacing:3px; color:var(--muted);">
+            Ukupna cijena
+        </h2>
+        <p id="total-price"
+           style="font-size: clamp(2rem, 6vw, 3.5rem);
+                  color: var(--primary);
+                  font-weight: 800;
+                  font-family: 'Syncopate';">
+            0 €
+        </p>
+        <button class="btn-lux primary"
+                style="margin-top: 25px; padding: 18px 50px; cursor: pointer;"
+                onclick="checkout()">
+            Završi kupovinu
+        </button>
+    </div>
+</main>
+<div id="checkout-modal"
+     style="display:none; position:fixed; inset:0;
+            background:rgba(255,255,255,0.95);
+            z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; padding:60px;
+                border:1px solid var(--border);
+                border-radius:20px;
+                max-width:550px; width:90%;
+                text-align:center;" data-aos="zoom-in">
+
+        <div style="font-size:4rem; color:var(--primary); margin-bottom:20px;">✓</div>
+        <h2 class="syncopate" style="letter-spacing:3px; margin-bottom:20px;">
+            Narudžba zaprimljena
+        </h2>
+        <p style="color:var(--muted); line-height:1.7; margin-bottom:40px;">
+            Vaša narudžba je uspješno zaprimljena.
+            Naš <b>Samsung tim</b> kontaktirat će Vas uskoro.
+        </p>
+
+        <button class="btn-lux primary"
+                style="width:100%; padding:15px;"
+                onclick="closeModalAndClear()">
+            Povratak na početnu stranicu
+        </button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container" style="text-align:center; padding:60px 5%; border-top:1px solid var(--border);">
+        <div class="logo syncopate" style="font-size:1.6rem;">GALAXY<span>STORE</span></div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/samsunghrvatska/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Samsung"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/nid0n/WebAplikacije-projekt-web-stranica"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        &copy; Copyright Samsung store
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+<script>AOS.init({ once:true });</script>
+
+</body>
+</html>
