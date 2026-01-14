@@ -17,15 +17,19 @@
         <ul class="nav-links">
             <li><a href="index.html">Početna</a></li>
             <li><a href="index.html#inventory">Uređaji</a></li>
-            <li><a href="novosti.html">Novosti</a></li>
+            <li><a href="news.html">Novosti</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
 
         <div class="nav-right">
             <a href="kosarica.html" class="cart-link">
                 <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-text">Košarica</span>
+                [<span id="cart-count">0</span>]
             </a>
-            <a href="login.html" class="login-btn-top">Prijava</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
 </header>
@@ -84,7 +88,6 @@
 </div>
 
 
-
 <main class="grid-container" id="inventory">
     <div class="section-header" data-aos="fade-right">
         <h2 class="section-title syncopate">Novo u ponudi</h2>
@@ -105,6 +108,5 @@
         &copy; Copyright Samsung store
     </div>
 </footer>
-
 </body>
 </html>
